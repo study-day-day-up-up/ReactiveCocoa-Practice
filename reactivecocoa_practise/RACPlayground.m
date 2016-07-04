@@ -215,12 +215,28 @@ void test4() {
 
 
 
+int max(int *array, int count)
+{
+    if (count == 1)
+        return array[0];
+    
+    return array[0] > max(array + 1, count - 1)? array[0] : max(array + 1, count - 1);
+}
+
+
+func absSort (arr : [Int]) -> [Int] {
+    return arr.sorted
+}
 
 
 
+func averageOfFunction(a:Float,b:Float,f:(Float -> Float)) -> Float {
+    return (f(a) + f(b)) / 2
+}
 
+averageOfFunction(3, 4, square)a
 
-
+verageOfFunction(3, 4, cube)
 
 
 
